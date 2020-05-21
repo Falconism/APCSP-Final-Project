@@ -23,7 +23,7 @@ namespace APCSP_Final_Project
         public List<Card> GetCards(long count)
         {
             string sql = "SELECT Id, Name, Artist, Flavortext FROM cards LIMIT @Count";
-            List<Card> result = connection.Query<Card>(sql, new { Count = count }).AsList();
+            List<Card> result = connection.Query<Card>(sql, new {Count = count}).AsList();
             return result;
         }
     }
